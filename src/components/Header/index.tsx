@@ -1,7 +1,8 @@
 import React from 'react';
-import {Image, Text, View} from 'react-native';
+import {Image, View} from 'react-native';
 import HeaderStyles from './styles';
 import styles from '../../theme/styles';
+import {CaretDown} from 'phosphor-react-native';
 
 const Header: React.FC = () => {
   return (
@@ -10,7 +11,12 @@ const Header: React.FC = () => {
         style={styles.tinyLogo}
         source={require('../../../assets/images/logo/Chiper.png')}
       />
-      <Text style={HeaderStyles.arrow}>ˇ</Text>
+      <CaretDown
+        weight="bold"
+        style={HeaderStyles.arrow}
+        color={styles.primary.color}
+        size={18}
+      />
     </View>
   );
 };

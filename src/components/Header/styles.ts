@@ -1,15 +1,13 @@
 import {StyleSheet} from 'react-native';
-import {colors} from '../../theme/styles';
+import styles from '../../theme/styles';
 
 const HeaderStyles = StyleSheet.create({
   container: {
     padding: 16,
     alignItems: 'center',
+    backgroundColor: styles.primary.backgroundColor,
   },
   arrow: {
-    color: colors.white,
-    fontSize: 42,
-    fontWeight: '500',
     marginTop: 10,
   },
 });
