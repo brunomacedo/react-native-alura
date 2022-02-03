@@ -1,33 +1,14 @@
 import {StyleSheet} from 'react-native';
-import {colors} from '../../theme/styles';
+import styles, {colors} from '../../theme/styles';
 
 const MainStyles = StyleSheet.create({
-  content: {
-    flex: 1,
-    justifyContent: 'center',
-    maxHeight: 400,
-    zIndex: 5,
-  },
-  card: {
-    flex: 1,
-    height: '100%',
-    backgroundColor: colors.white,
-    borderRadius: 3,
-    marginHorizontal: 16,
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-  },
-  cardHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    padding: 32,
-  },
   cardContent: {
-    flex: 1,
+    borderTopColor: colors['gray-100'],
+    borderTopWidth: StyleSheet.hairlineWidth,
     justifyContent: 'center',
-    paddingHorizontal: 32,
+    marginHorizontal: 32,
+    paddingVertical: 32,
+    minHeight: 210,
   },
   cardContentTitle: {
     fontSize: 14,
@@ -36,17 +17,7 @@ const MainStyles = StyleSheet.create({
   cardContentDescription: {
     fontSize: 22,
     marginTop: 6,
-    color: '#333',
-  },
-  cardFooter: {
-    backgroundColor: colors['gray-25'],
-    paddingVertical: 16,
-    paddingHorizontal: 32,
-    borderRadius: 3,
-  },
-  cardAnnotation: {
-    fontSize: 12,
-    color: '#333',
+    color: styles.primary.color,
   },
 });
 

@@ -1,102 +1,150 @@
 import React from 'react';
 import {Animated, View, Text} from 'react-native';
+import {ScrollView} from 'react-native-gesture-handler';
 import Header from '../../components/Header';
 
-import {
-  PanGestureHandlerStateChangeEvent,
-  PanGestureHandler,
-  State,
-} from 'react-native-gesture-handler';
-
-import styles, {primary} from '../../theme/styles';
+import styles from '../../theme/styles';
 import MainStyles from './styles';
-import {CurrencyDollar, Eye} from 'phosphor-react-native';
 
 const Main: React.FC = () => {
-  let offset = 0;
-  const translateY = new Animated.Value(0);
-
-  const onGestureEvent = Animated.event(
-    [
-      {
-        nativeEvent: {
-          translationY: translateY,
-        },
-      },
-    ],
-    {useNativeDriver: true},
-  );
-
-  const onHandlerStateChange = (event: PanGestureHandlerStateChangeEvent) => {
-    if (event.nativeEvent.oldState === State.ACTIVE) {
-      let opened = false;
-      const {translationY} = event.nativeEvent;
-
-      offset += translationY;
-
-      if (translationY >= 100) {
-        opened = true;
-      } else {
-        translateY.setValue(offset);
-        translateY.setOffset(0);
-        offset = 0;
-      }
-
-      Animated.timing(translateY, {
-        toValue: opened ? 380 : 0,
-        duration: 200,
-        useNativeDriver: true,
-      }).start(() => {
-        offset = opened ? 380 : 0;
-        translateY.setOffset(offset);
-        translateY.setValue(0);
-      });
-    }
-  };
-
   return (
-    <View style={styles.container}>
+    <>
       <Header />
+      <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
+        <Animated.View>
+          <View style={MainStyles.cardContent}>
+            <Text numberOfLines={2} style={MainStyles.cardContentTitle}>
+              Lorem ipsum dolor sit amet consectetur
+            </Text>
+            <Text numberOfLines={4} style={MainStyles.cardContentDescription}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque rem
+              praesentium exercitationem vel?
+            </Text>
+          </View>
+        </Animated.View>
 
-      <View style={MainStyles.content}>
-        <PanGestureHandler
-          onGestureEvent={onGestureEvent}
-          onHandlerStateChange={onHandlerStateChange}>
-          <Animated.View
-            style={{
-              ...MainStyles.card,
-              transform: [
-                {
-                  translateY: translateY.interpolate({
-                    inputRange: [-350, 0, 380],
-                    outputRange: [-50, 0, 380],
-                    extrapolate: 'clamp',
-                  }),
-                },
-              ],
-            }}>
-            <View style={MainStyles.cardHeader}>
-              <CurrencyDollar size={32} color={primary} />
-              <Eye size={32} color={primary} />
-            </View>
-            <View style={MainStyles.cardContent}>
-              <Text numberOfLines={2} style={MainStyles.cardContentTitle}>
-                Lorem ipsum dolor sit amet consectetur
-              </Text>
-              <Text numberOfLines={4} style={MainStyles.cardContentDescription}>
-                Lorem ipsum dolor sit, amet consectetur
-              </Text>
-            </View>
-            <View style={MainStyles.cardFooter}>
-              <Text numberOfLines={2} style={MainStyles.cardAnnotation}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aliquid, totam rem aperiam a saepe odio vel
-              </Text>
-            </View>
-          </Animated.View>
-        </PanGestureHandler>
-      </View>
-    </View>
+        <Animated.View>
+          <View style={MainStyles.cardContent}>
+            <Text numberOfLines={2} style={MainStyles.cardContentTitle}>
+              Lorem ipsum dolor sit amet consectetur
+            </Text>
+            <Text numberOfLines={4} style={MainStyles.cardContentDescription}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Reprehenderit quis vero amet dignissimos numquam vel autem ullam
+              sequi optio. Numquam, ab in odit et illo quis reiciendis excepturi
+              dignissimos culpa.
+            </Text>
+          </View>
+        </Animated.View>
+
+        <Animated.View>
+          <View style={MainStyles.cardContent}>
+            <Text numberOfLines={2} style={MainStyles.cardContentTitle}>
+              Lorem ipsum dolor sit amet aut facere quisquam, consequatur fuga
+              magni neque, autem nostrum exercitationem laudantium. Veritatis
+              ratione suscipit rem eum eaque eius alias porro.
+            </Text>
+            <Text numberOfLines={4} style={MainStyles.cardContentDescription}>
+              Lorem ipsum dolor sit amet tenetur iste eligendi alias mollitia
+              veritatis in, soluta reprehenderit eius est cupiditate sunt
+              obcaecati voluptatibus voluptates placeat! Assumenda delectus
+              repudiandae odit animi.
+            </Text>
+          </View>
+        </Animated.View>
+
+        <Animated.View>
+          <View style={MainStyles.cardContent}>
+            <Text numberOfLines={2} style={MainStyles.cardContentTitle}>
+              Lorem ipsum dolor sit amet consectetur
+            </Text>
+            <Text numberOfLines={4} style={MainStyles.cardContentDescription}>
+              Lorem ipsum dolor sit, amet consectetur
+            </Text>
+          </View>
+        </Animated.View>
+
+        <Animated.View>
+          <View style={MainStyles.cardContent}>
+            <Text numberOfLines={2} style={MainStyles.cardContentTitle}>
+              Lorem ipsum dolor sit amet consectetur
+            </Text>
+            <Text numberOfLines={4} style={MainStyles.cardContentDescription}>
+              Lorem ipsum dolor sit, amet consectetur
+            </Text>
+          </View>
+        </Animated.View>
+
+        <Animated.View>
+          <View style={MainStyles.cardContent}>
+            <Text numberOfLines={2} style={MainStyles.cardContentTitle}>
+              Lorem ipsum dolor sit amet consectetur
+            </Text>
+            <Text numberOfLines={4} style={MainStyles.cardContentDescription}>
+              Lorem ipsum dolor sit, amet consectetur
+            </Text>
+          </View>
+        </Animated.View>
+
+        <Animated.View>
+          <View style={MainStyles.cardContent}>
+            <Text numberOfLines={2} style={MainStyles.cardContentTitle}>
+              Lorem ipsum dolor sit amet consectetur
+            </Text>
+            <Text numberOfLines={4} style={MainStyles.cardContentDescription}>
+              Lorem ipsum dolor sit, amet consectetur
+            </Text>
+          </View>
+        </Animated.View>
+
+        <Animated.View>
+          <View style={MainStyles.cardContent}>
+            <Text numberOfLines={2} style={MainStyles.cardContentTitle}>
+              Lorem ipsum dolor sit amet consectetur
+            </Text>
+            <Text numberOfLines={4} style={MainStyles.cardContentDescription}>
+              Lorem ipsum dolor sit, amet consectetur
+            </Text>
+          </View>
+        </Animated.View>
+
+        <Animated.View>
+          <View style={MainStyles.cardContent}>
+            <Text numberOfLines={2} style={MainStyles.cardContentTitle}>
+              Lorem ipsum dolor sit amet consectetur
+            </Text>
+            <Text numberOfLines={4} style={MainStyles.cardContentDescription}>
+              Lorem ipsum dolor sit, amet consectetur
+            </Text>
+          </View>
+        </Animated.View>
+
+        <Animated.View>
+          <View style={MainStyles.cardContent}>
+            <Text numberOfLines={2} style={MainStyles.cardContentTitle}>
+              Lorem ipsum dolor sit amet consectetur
+            </Text>
+            <Text numberOfLines={4} style={MainStyles.cardContentDescription}>
+              Lorem ipsum dolor sit, amet consectetur
+            </Text>
+          </View>
+        </Animated.View>
+
+        <Animated.View>
+          <View style={MainStyles.cardContent}>
+            <Text numberOfLines={2} style={MainStyles.cardContentTitle}>
+              Lorem
+            </Text>
+            <Text numberOfLines={4} style={MainStyles.cardContentDescription}>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id,
+              quibusdam minima. Suscipit, natus molestias facere placeat laborum
+              doloribus hic. Autem, commodi. Repudiandae reiciendis in, officia
+              saepe consectetur ab id error?
+            </Text>
+          </View>
+        </Animated.View>
+      </ScrollView>
+    </>
   );
 };
 
