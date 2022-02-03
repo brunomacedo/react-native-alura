@@ -5,7 +5,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {NavigationContainer} from '@react-navigation/native';
 import disableAppLogs from './utils/logs';
 import Routes from './routes';
-import styles, {primary} from './theme/styles';
+import styles from './theme/styles';
 
 disableAppLogs();
 
@@ -14,7 +14,10 @@ const App: React.FC = () => {
     <GestureHandlerRootView style={styles.safearea}>
       <SafeAreaView style={styles.safearea}>
         <NavigationContainer>
-          <StatusBar barStyle="light-content" backgroundColor={primary} />
+          <StatusBar
+            barStyle="light-content"
+            backgroundColor={styles.primary.backgroundColor}
+          />
           <Routes />
         </NavigationContainer>
       </SafeAreaView>

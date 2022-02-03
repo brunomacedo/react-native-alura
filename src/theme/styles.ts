@@ -1,6 +1,11 @@
-import {StyleSheet} from 'react-native';
+import {Appearance, StyleSheet} from 'react-native';
+
+const colorScheme = Appearance.getColorScheme();
+
+const isDarkMode = colorScheme === 'dark';
 
 type TColorsList =
+  | 'black'
   | 'bleu'
   | 'brand'
   | 'bright-yellow'
@@ -21,6 +26,7 @@ type TColors = {
 };
 
 export const colors: TColors = {
+  black: '#333333',
   bleu: '#3584E0',
   brand: '#FF0136',
   'bright-yellow': '#FF9F26',
@@ -37,25 +43,26 @@ export const colors: TColors = {
   yankees: '#2B2845',
 };
 
-export const primary = colors.brand;
+export const light = colors['ghost-white'];
+
+export const dark = colors.black;
 
 const styles = StyleSheet.create({
   primary: {
-    backgroundColor: primary,
-    color: colors.white,
+    backgroundColor: isDarkMode ? dark : light,
+    color: !isDarkMode ? dark : light,
   },
   safearea: {
     flex: 1,
-    backgroundColor: primary,
+    backgroundColor: isDarkMode ? dark : light,
   },
   container: {
-    flex: 1,
-    backgroundColor: primary,
-    justifyContent: 'center',
+    backgroundColor: isDarkMode ? dark : light,
   },
   tinyLogo: {
     width: 120,
     height: 45,
+    tintColor: !isDarkMode ? colors.brand : colors.white,
   },
 });
 
