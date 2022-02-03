@@ -1,9 +1,6 @@
 import React from 'react';
-import {Animated, View} from 'react-native';
-import ContentCard from '../../components/ContentCard';
+import {Animated, View, Text} from 'react-native';
 import Header from '../../components/Header';
-import Menu from '../../components/Menu';
-import Tabs from '../../components/Tabs';
 
 import {
   PanGestureHandlerStateChangeEvent,
@@ -11,15 +8,11 @@ import {
   State,
 } from 'react-native-gesture-handler';
 
-import ContentCardStyles from '../../components/ContentCard/styles';
-import styles from '../../theme/styles';
+import styles, {primary} from '../../theme/styles';
 import MainStyles from './styles';
+import {CurrencyDollar, Eye} from 'phosphor-react-native';
 
 const Main: React.FC = () => {
-  /**
-   * Don't be created as useState
-   * because to improve performance
-   */
   let offset = 0;
   const translateY = new Animated.Value(0);
 
@@ -66,14 +59,12 @@ const Main: React.FC = () => {
       <Header />
 
       <View style={MainStyles.content}>
-        <Menu translateY={translateY} />
-
         <PanGestureHandler
           onGestureEvent={onGestureEvent}
           onHandlerStateChange={onHandlerStateChange}>
           <Animated.View
             style={{
-              ...ContentCardStyles.card,
+              ...MainStyles.card,
               transform: [
                 {
                   translateY: translateY.interpolate({
@@ -84,12 +75,27 @@ const Main: React.FC = () => {
                 },
               ],
             }}>
-            <ContentCard />
+            <View style={MainStyles.cardHeader}>
+              <CurrencyDollar size={32} color={primary} />
+              <Eye size={32} color={primary} />
+            </View>
+            <View style={MainStyles.cardContent}>
+              <Text numberOfLines={2} style={MainStyles.cardContentTitle}>
+                Lorem ipsum dolor sit amet consectetur
+              </Text>
+              <Text numberOfLines={4} style={MainStyles.cardContentDescription}>
+                Lorem ipsum dolor sit, amet consectetur
+              </Text>
+            </View>
+            <View style={MainStyles.cardFooter}>
+              <Text numberOfLines={2} style={MainStyles.cardAnnotation}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aliquid, totam rem aperiam a saepe odio vel
+              </Text>
+            </View>
           </Animated.View>
         </PanGestureHandler>
       </View>
-
-      <Tabs translateY={translateY} />
     </View>
   );
 };

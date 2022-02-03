@@ -11,9 +11,14 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		1C8A087357ED45E3BE1E92F9 /* CaustenRound-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BD2B60C940AB4E2C8FDA1044 /* CaustenRound-Regular.otf */; };
+		3D7A866DE86D4A3F9EC5501B /* Chiper@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B8B0446A0F841D1B397154B /* Chiper@2x.png */; };
+		402190EF1F2C4B3FB0FFF075 /* Chiper@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B1D7691E844475280C762AE /* Chiper@3x.png */; };
+		4F4BFE1EDD3740A6A8368CDD /* CaustenRound-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0BE29557BA9547C4A2789B9C /* CaustenRound-Bold.otf */; };
 		6172F2D35A4C3AA820D92908 /* libPods-chiperlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6423831EA8574132BED9D8CC /* libPods-chiperlight.a */; };
 		7EF68E3733C33B6898317E18 /* libPods-chiperlight-chiperlightTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABFE59519B596E51CEFDCCC0 /* libPods-chiperlight-chiperlightTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		81ABE1DBF0B14297AFCCDC2E /* Chiper.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FD65AB831A44C04A7690F65 /* Chiper.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,17 +35,22 @@
 		00E356EE1AD99517003FC87E /* chiperlightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chiperlightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* chiperlightTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = chiperlightTests.m; sourceTree = "<group>"; };
+		0BE29557BA9547C4A2789B9C /* CaustenRound-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "CaustenRound-Bold.otf"; path = "../assets/fonts/CaustenRound-Bold.otf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* chiperlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chiperlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = chiperlight/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = chiperlight/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = chiperlight/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = chiperlight/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = chiperlight/main.m; sourceTree = "<group>"; };
+		1B1D7691E844475280C762AE /* Chiper@3x.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Chiper@3x.png"; path = "../assets/images/logo/Chiper@3x.png"; sourceTree = "<group>"; };
 		1D0AE47A65C8663E3B452821 /* Pods-chiperlight-chiperlightTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chiperlight-chiperlightTests.release.xcconfig"; path = "Target Support Files/Pods-chiperlight-chiperlightTests/Pods-chiperlight-chiperlightTests.release.xcconfig"; sourceTree = "<group>"; };
+		1FD65AB831A44C04A7690F65 /* Chiper.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Chiper.png; path = ../assets/images/logo/Chiper.png; sourceTree = "<group>"; };
+		5B8B0446A0F841D1B397154B /* Chiper@2x.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Chiper@2x.png"; path = "../assets/images/logo/Chiper@2x.png"; sourceTree = "<group>"; };
 		6423831EA8574132BED9D8CC /* libPods-chiperlight.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-chiperlight.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C97AB639B58BBB4B15BBE30 /* Pods-chiperlight-chiperlightTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chiperlight-chiperlightTests.debug.xcconfig"; path = "Target Support Files/Pods-chiperlight-chiperlightTests/Pods-chiperlight-chiperlightTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = chiperlight/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABFE59519B596E51CEFDCCC0 /* libPods-chiperlight-chiperlightTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-chiperlight-chiperlightTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD2B60C940AB4E2C8FDA1044 /* CaustenRound-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "CaustenRound-Regular.otf"; path = "../assets/fonts/CaustenRound-Regular.otf"; sourceTree = "<group>"; };
 		C0A881CF5CF3F2B244570E2A /* Pods-chiperlight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chiperlight.debug.xcconfig"; path = "Target Support Files/Pods-chiperlight/Pods-chiperlight.debug.xcconfig"; sourceTree = "<group>"; };
 		D00AAFFCFCFDA5787532823F /* Pods-chiperlight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chiperlight.release.xcconfig"; path = "Target Support Files/Pods-chiperlight/Pods-chiperlight.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -122,6 +132,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				E233CBF5F47BEE60B243DCF8 /* Pods */,
+				A38DC92C22FA4446B47F4EAC /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -135,6 +146,19 @@
 				00E356EE1AD99517003FC87E /* chiperlightTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A38DC92C22FA4446B47F4EAC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1FD65AB831A44C04A7690F65 /* Chiper.png */,
+				5B8B0446A0F841D1B397154B /* Chiper@2x.png */,
+				1B1D7691E844475280C762AE /* Chiper@3x.png */,
+				0BE29557BA9547C4A2789B9C /* CaustenRound-Bold.otf */,
+				BD2B60C940AB4E2C8FDA1044 /* CaustenRound-Regular.otf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 		E233CBF5F47BEE60B243DCF8 /* Pods */ = {
@@ -245,6 +269,11 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				81ABE1DBF0B14297AFCCDC2E /* Chiper.png in Resources */,
+				3D7A866DE86D4A3F9EC5501B /* Chiper@2x.png in Resources */,
+				402190EF1F2C4B3FB0FFF075 /* Chiper@3x.png in Resources */,
+				4F4BFE1EDD3740A6A8368CDD /* CaustenRound-Bold.otf in Resources */,
+				1C8A087357ED45E3BE1E92F9 /* CaustenRound-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
