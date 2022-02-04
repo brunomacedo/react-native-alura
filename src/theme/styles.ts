@@ -64,6 +64,11 @@ const styles = StyleSheet.create({
     height: 45,
     tintColor: !isDarkMode ? colors.brand : colors.white,
   },
+  separator: {
+    width: '100%',
+    height: StyleSheet.hairlineWidth,
+    backgroundColor: colors['gray-100'],
+  },
 });
 
 export default styles;
