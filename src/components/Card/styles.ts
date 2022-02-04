@@ -3,12 +3,11 @@ import styles, {colors} from '../../theme/styles';
 
 const CardStyles = StyleSheet.create({
   cardContent: {
-    borderTopColor: colors['gray-100'],
-    borderTopWidth: StyleSheet.hairlineWidth,
+    backgroundColor: styles.primary.backgroundColor,
     alignItems: 'center',
     justifyContent: 'center',
-    marginHorizontal: 32,
-    paddingVertical: 32,
+    paddingVertical: 16,
+    paddingHorizontal: 16,
     minHeight: 210,
   },
   cardContentDescription: {
@@ -19,6 +18,12 @@ const CardStyles = StyleSheet.create({
     fontSize: 16,
     marginTop: 6,
     color: colors['gray-300'],
+  },
+  deleteButton: {
+    width: 120,
+    backgroundColor: colors.brand,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 
