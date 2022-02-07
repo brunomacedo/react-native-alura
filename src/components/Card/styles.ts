@@ -1,14 +1,19 @@
 import {StyleSheet} from 'react-native';
 import styles, {colors} from '../../theme/styles';
 
+const fixPaddingRadius = 12;
+
 const CardStyles = StyleSheet.create({
   cardContent: {
     backgroundColor: styles.primary.backgroundColor,
     alignItems: 'center',
     justifyContent: 'center',
     paddingVertical: 16,
-    paddingHorizontal: 16,
+    paddingLeft: 16,
+    paddingRight: 16 + fixPaddingRadius,
     minHeight: 210,
+    borderRadius: fixPaddingRadius,
+    marginRight: -fixPaddingRadius,
   },
   cardContentDescription: {
     fontSize: 22,
@@ -21,6 +26,7 @@ const CardStyles = StyleSheet.create({
   },
   deleteButton: {
     width: 120,
+    paddingLeft: fixPaddingRadius,
     backgroundColor: colors.brand,
     justifyContent: 'center',
     alignItems: 'center',

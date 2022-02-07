@@ -8,12 +8,12 @@ import styles from '../../theme/styles';
 
 const Main: React.FC = () => {
   const [refreshing, setRefreshing] = useState(false);
-  const [data, setdata] = useState(MenuItems);
+  const [data, setdata] = useState(MenuItems());
 
   const onRefresh = () => {
     setRefreshing(true);
     setTimeout(() => {
-      setdata(item => [...item]);
+      setdata(item => [...MenuItems(), ...item]);
       setRefreshing(false);
     }, 1000);
   };
